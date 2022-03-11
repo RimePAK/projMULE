@@ -1,3 +1,4 @@
+//SQLITE JDBC JAVA CONNECTION!
 package sqlite1;
 import java.sql.*;
 import java.sql.Statement;
@@ -68,7 +69,7 @@ public class sqlite1 {
 	
 	private static void insertmovie(Connection con,String title,String lactor,String lactress,int release,String director) throws SQLException{
 	String insertSQL="INSERT INTO movies(title, lactor, lactress, release, director) VALUES(?,?,?,?,?)";//INSERT statement
-	PreparedStatement pst= con.prepareStatement(insertSQL);//preparing statement pst to execute inesertSQL
+	PreparedStatement pst= con.prepareStatement(insertSQL);//preparing statement pst to execute insertSQL
 	pst.setString(1, title);
 	pst.setString(2, lactor);
 	pst.setString(3, lactress);
